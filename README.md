@@ -2,12 +2,12 @@
 ---
 ## Technologies:
 
-### Docker - Infrastructure
-### Laravel (PHP) - Backend
-### Vue - Front
-### Typescript - Pattern for front
-### Swagger - API Documentation and test
-### MySQL - Database
+- Docker - Infrastructure
+- Laravel (PHP) - Backend
+- Vue - Front
+- Typescript - Pattern for front
+- Swagger - API Documentation and test
+- MySQL - Database
 ---
 ## Useful commands:
 ## Startup containers
@@ -40,6 +40,13 @@ php artisan l5-swagger:generate
 ### Roles Panel
 ### Products Panel
 ### Orders Panel
+<br />
 
 # System screens:
+<br />
+
+## Sign in
+<h1 align="center">
+    <img alt="sign in screen" src="https://github.com/Matheuscruztj/laravue3_admin_app_v1/blob/main/images/signin.PNG" /><br>
+</h1>
 
