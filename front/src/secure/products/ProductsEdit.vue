@@ -1,7 +1,7 @@
 <template>
     <main class="w-100">
         <form class="form-signin" @submit.prevent="submit">
-            <h1 class="h3 mb-3 fw-normal">Please register</h1>
+            <h1 class="h3 mb-3 fw-normal">Product Information</h1>
 
             <div class="form-group">
                 <label>Title</label>
@@ -27,7 +27,9 @@
                 <input type="number" class="form-control" name="price" required v-model="price">
             </div>
 
-            <button class="btn btn-outline-secondary">Save</button>
+            <div class="mt-4">
+                <button class="btn btn-outline-secondary">Save</button>
+            </div>
         </form>
     </main>
 </template>
