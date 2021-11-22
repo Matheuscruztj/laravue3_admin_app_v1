@@ -1,0 +1,37 @@
+version: '3'
+services:
+  back_laravel:
+    container_name: back
+    build: back
+    restart: unless-stopped
+    volumes:
+      - ./back:/var/www/html
+    ports:
+      - "8000:8000"
+    links:
+      - "db:db"
+  front_vue:
+    container_name: front
+    build: front
+    restart: unless-stopped
+    working_dir: /usr/app
+    ports:
+      - 8080:8080
+    volumes:
+      - "./front/:/app"
+    depends_on:
+      - back_laravel
+  db:
+    container_name: db
+    restart: unless-stopped
+    image: mysql:5.7.34
+    environment:
+      MYSQL_DATABASE: admin
+      MYSQL_ROOT_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+    - ./database/dbdata:/var/lib/mysql
+    ports:
+    - 33866:3386
+    - 3306:3306
